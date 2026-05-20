@@ -645,13 +645,14 @@ img {
 /* Products Grid Layout */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
     gap: 2rem;
 }
 
 @media (max-width: 480px) {
     .products-grid {
         grid-template-columns: 1fr;
+        gap: 1.25rem;
     }
 }
 
@@ -1753,9 +1754,11 @@ img {
         margin-left: 0;
         padding: 1.25rem;
         width: 100%;
+        max-width: 100%;
         text-align: center;
         background: linear-gradient(to top, rgba(44, 42, 41, 0.7) 0%, rgba(44, 42, 41, 0.2) 100%);
         border-radius: var(--radius-md);
+        box-sizing: border-box;
     }
 
     .btn-outline-white {
@@ -1984,5 +1987,45 @@ img {
         width: 100%;
         padding: 0.5rem;
         font-size: 0.8rem;
+    }
+}
+
+/* ==========================================
+   ULTRA-NARROW VIEWPORTS (320px - Galaxy Fold etc.)
+   ========================================== */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    .logo {
+        font-size: 1.2rem;
+    }
+    .logo-sub {
+        display: none; /* Hide THAILAND badge on extreme narrow */
+    }
+    .nav-container {
+        padding: 0 0.75rem;
+    }
+    .section-title {
+        font-size: 1.45rem;
+    }
+    .tab-btn {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.75rem;
+    }
+    .product-title {
+        font-size: 1rem;
+    }
+    .modal-body h3 {
+        font-size: 1.2rem;
+    }
+    .event-info h2 {
+        font-size: 1.35rem;
+    }
+    .slide h2 {
+        font-size: 1.4rem;
+    }
+    .slide p {
+        font-size: 0.82rem;
     }
 }
