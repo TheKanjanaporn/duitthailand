@@ -1413,8 +1413,10 @@ img {
     width: 100%;
     flex: 1;
     min-height: 0;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
+    padding: 1.5rem;
+    box-sizing: border-box;
 }
 
 .modal-visual .slider-arrow {
@@ -1567,7 +1569,9 @@ img {
     }
     .modal-visual img {
         height: 100% !important;
-        object-fit: cover !important;
+        object-fit: contain !important;
+        padding: 0.75rem !important;
+        box-sizing: border-box !important;
     }
     .modal-body {
         width: 100% !important;
