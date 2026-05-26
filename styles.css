@@ -1460,7 +1460,7 @@ img {
 }
 
 .modal-body {
-    padding: 3rem;
+    padding: 3rem 1.25rem 3rem 3rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
