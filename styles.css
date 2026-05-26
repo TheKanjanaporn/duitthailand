@@ -734,7 +734,8 @@ img {
     color: var(--color-text-muted);
     margin-bottom: 1rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .product-price {
