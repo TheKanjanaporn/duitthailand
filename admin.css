@@ -91,11 +91,12 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body {
+html, body {
     font-family: 'Outfit', 'Prompt', sans-serif;
     background: var(--admin-bg);
     color: var(--admin-text);
     min-height: 100vh;
+    width: 100%;
     overflow-x: hidden;
     font-size: 14px;
     line-height: 1.6;
@@ -396,6 +397,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Prevent child elements from causing horizontal scroll */
+    max-width: 100%;
 }
 
 /* TOP BAR */
@@ -1326,7 +1329,7 @@ body {
 
     /* Admin Drawer (Modals) */
     .admin-drawer {
-        width: 100vw;
+        width: 100%; /* Use 100% instead of 100vw to prevent scrollbar overflow bugs */
         border-left: none;
     }
     
