@@ -25,10 +25,10 @@
 .big-toggle-slider {
     position: absolute;
     inset: 0;
-    background: rgba(255,255,255,0.12);
+    background: rgba(44, 42, 41, 0.08);
     border-radius: 34px;
     transition: 0.35s cubic-bezier(0.4,0,0.2,1);
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(44, 42, 41, 0.12);
 }
 
 .big-toggle-slider::before {
@@ -38,10 +38,10 @@
     height: 26px;
     left: 3px;
     top: 3px;
-    background: rgba(255,255,255,0.6);
+    background: #ffffff;
     border-radius: 50%;
     transition: 0.35s cubic-bezier(0.4,0,0.2,1);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 5px rgba(44, 42, 41, 0.15);
 }
 
 .big-toggle input:checked + .big-toggle-slider {
@@ -60,32 +60,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --admin-bg: #0f1117;
-    --admin-surface: #1a1d27;
-    --admin-surface-2: #22263a;
-    --admin-surface-3: #2a2f45;
-    --admin-border: rgba(255,255,255,0.08);
-    --admin-border-hover: rgba(255,255,255,0.16);
-    --admin-accent: #c8a96e;
-    --admin-accent-dark: #a8894e;
-    --admin-accent-light: rgba(200,169,110,0.15);
-    --admin-success: #34d399;
-    --admin-success-bg: rgba(52,211,153,0.12);
-    --admin-danger: #f87171;
-    --admin-danger-bg: rgba(248,113,113,0.12);
-    --admin-warning: #fbbf24;
-    --admin-warning-bg: rgba(251,191,36,0.12);
-    --admin-info: #60a5fa;
-    --admin-info-bg: rgba(96,165,250,0.12);
-    --admin-text: #e8eaf0;
-    --admin-text-muted: #8890a8;
-    --admin-text-dim: #555d7a;
+    --admin-bg: #faf9f6; /* Warm minimalist off-white background matching the brand website */
+    --admin-surface: #ffffff; /* Pure white cards/containers */
+    --admin-surface-2: #f2f1eb; /* Warm, clean gray-beige for sidebar active links, input fields, etc. */
+    --admin-surface-3: #e8e6dd; /* Slightly darker warm gray for hover states and borders */
+    --admin-border: #e2ded5; /* Light warm-gray thin border */
+    --admin-border-hover: #c4c0b5; /* Darker border for hover states */
+    --admin-accent: #c8a96e; /* DUIT premium warm gold/taupe brand color */
+    --admin-accent-dark: #a8894e; /* Darker brand accent */
+    --admin-accent-light: rgba(200, 169, 110, 0.12); /* Extremely soft brand gold highlight overlay */
+    --admin-success: #10b981; /* Soft green */
+    --admin-success-bg: rgba(16, 185, 129, 0.08);
+    --admin-danger: #ef4444; /* Soft red */
+    --admin-danger-bg: rgba(239, 68, 68, 0.08);
+    --admin-warning: #f59e0b; /* Warm amber */
+    --admin-warning-bg: rgba(245, 158, 11, 0.08);
+    --admin-info: #3b82f6; /* Soft blue */
+    --admin-info-bg: rgba(59, 130, 246, 0.08);
+    --admin-text: #2c2a29; /* Deep warm dark charcoal for premium readability and brand styling */
+    --admin-text-muted: #787572; /* Warm gray for descriptions and secondary text */
+    --admin-text-dim: #a6a39f; /* Lighter warm gray for placeholders and hints */
     --sidebar-w: 260px;
     --topbar-h: 64px;
-    --radius: 12px;
+    --radius: 16px; /* Slightly softer borders for cleaner aesthetic */
     --radius-sm: 8px;
-    --shadow: 0 4px 20px rgba(0,0,0,0.4);
-    --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+    --shadow: 0 10px 30px -10px rgba(44, 42, 41, 0.06); /* Extremely soft premium shadow */
+    --shadow-sm: 0 4px 12px -2px rgba(44, 42, 41, 0.04);
     --transition: 0.2s ease;
 }
 
@@ -581,7 +581,7 @@ body {
 .product-list-table tr:last-child td { border-bottom: none; }
 
 .product-list-table tr:hover td {
-    background: rgba(255,255,255,0.02);
+    background: rgba(44, 42, 41, 0.02);
 }
 
 .product-thumb {
@@ -1176,7 +1176,7 @@ body {
 
 .leads-tbl tr:last-child td { border-bottom: none; }
 
-.leads-tbl tr:hover td { background: rgba(255,255,255,0.02); }
+.leads-tbl tr:hover td { background: rgba(44, 42, 41, 0.015); }
 
 .code-chip {
     background: var(--admin-accent-light);

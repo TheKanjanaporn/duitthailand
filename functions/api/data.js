@@ -3,16 +3,27 @@ export async function onRequestGet(context) {
         const data = await context.env.DUIT_KV.get("cms_data");
         if (data) {
             return new Response(data, {
-                headers: { "Content-Type": "application/json" }
+                headers: { 
+                    "Content-Type": "application/json",
+                    "Cache-Control": "no-cache, no-store, must-revalidate",
+                    "Pragma": "no-cache",
+                    "Expires": "0"
+                }
             });
         }
         return new Response(JSON.stringify(null), {
-            headers: { "Content-Type": "application/json" }
+            headers: { 
+                "Content-Type": "application/json",
+                "Cache-Control": "no-cache, no-store, must-revalidate"
+            }
         });
     } catch (err) {
         return new Response(JSON.stringify({ error: "Failed to read data" }), {
             status: 500,
-            headers: { "Content-Type": "application/json" }
+            headers: { 
+                "Content-Type": "application/json",
+                "Cache-Control": "no-cache, no-store, must-revalidate"
+            }
         });
     }
 }

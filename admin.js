@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function loadCMSData() {
     try {
-        const res = await fetch('/api/data');
+        const res = await fetch(`/api/data?_t=${Date.now()}`);
         let saved = await res.json();
         
         // MIGRATION: If backend is empty, try to migrate from localStorage
@@ -1105,7 +1105,7 @@ function renderCategoryTable() {
 
 function openCategoryDrawer(id) {
     const modal = document.getElementById("categoryDrawer");
-    modal.classList.add("show");
+    modal.classList.add("open");
     
     if (id) {
         document.getElementById("categoryDrawerTitle").innerHTML = '<i class="fa-solid fa-tags"></i> แก้ไขหมวดหมู่';
@@ -1124,7 +1124,7 @@ function openCategoryDrawer(id) {
 }
 
 function closeCategoryDrawer() {
-    document.getElementById("categoryDrawer").classList.remove("show");
+    document.getElementById("categoryDrawer").classList.remove("open");
 }
 
 function onCategoryDrawerBackdropClick(e) {

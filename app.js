@@ -4,7 +4,7 @@
 // ==========================================
 async function loadCMSSiteData() {
     try {
-        const res = await fetch('/api/data');
+        const res = await fetch(`/api/data?_t=${Date.now()}`);
         _cmsData = await res.json();
     } catch (e) {
         console.warn("Failed to fetch from /api/data, using localStorage:", e);
@@ -804,7 +804,7 @@ function goToSlide(index) {
 // DISCOUNT / SALE UTILITIES
 // ==========================================
 function getDiscountConfig() {
-    const cms = loadCMSSiteData();
+    const cms = _cmsData;
     if (cms && cms.discount && cms.discount.enabled) {
         return {
             enabled: true,
@@ -1179,9 +1179,15 @@ function openModal(productId) {
     // Force synchronize heights for all browsers (Bulletproof fallback)
     setTimeout(() => {
         const visual = document.querySelector('.modal-visual');
-        const body = document.querySelector('.modal-body');
-        if (visual && body && body.offsetHeight > 0) {
-            visual.style.height = body.offsetHeight + 'px';
+        if (visual) {
+            if (window.innerWidth > 768) {
+                const body = document.querySelector('.modal-body');
+                if (body && body.offsetHeight > 0) {
+                    visual.style.height = body.offsetHeight + 'px';
+                }
+            } else {
+                visual.style.height = ''; // Reset height to let CSS/mobile styles govern it
+            }
         }
     }, 100);
 }

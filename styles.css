@@ -1556,13 +1556,22 @@ img {
 
 @media (max-width: 768px) {
     .modal-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column !important;
+        min-height: auto !important;
     }
     .modal-visual {
-        height: 250px;
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        height: 350px !important;
+        max-height: 40vh !important;
+    }
+    .modal-visual img {
+        height: 100% !important;
+        object-fit: cover !important;
     }
     .modal-body {
-        padding: 1.5rem;
+        width: 100% !important;
+        padding: 2.5rem 1.5rem !important;
     }
     .modal-container {
         width: 95%;
@@ -2165,11 +2174,15 @@ img {
     }
 
     .modal-visual {
-        height: 180px;
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        height: 240px !important;
+        max-height: 35vh !important;
     }
 
     .modal-body {
-        padding: 1.25rem 1rem;
+        width: 100% !important;
+        padding: 1.5rem 1rem !important;
     }
 
     .modal-body h3 {

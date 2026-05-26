@@ -222,12 +222,12 @@
             <div class="admin-panel" id="panel-discount">
 
                 <!-- Big Toggle Card -->
-                <div class="card" style="background: linear-gradient(135deg, #1a0a08, #2c1210); border-color: rgba(231,76,60,0.3);">
-                    <div class="card-header" style="border-color:rgba(231,76,60,0.2);">
-                        <h2 style="color:#fff;"><i class="fa-solid fa-percent" style="color:#e74c3c;"></i> ระบบส่วนลด Pet Expo</h2>
+                <div class="card" style="background: linear-gradient(135deg, #fdfaf6, #f6f3ed); border-color: rgba(231,76,60,0.15);">
+                    <div class="card-header" style="border-color:rgba(231,76,60,0.15);">
+                        <h2><i class="fa-solid fa-percent" style="color:#e74c3c;"></i> ระบบส่วนลด Pet Expo</h2>
                         <!-- Big ON/OFF Toggle -->
                         <div style="display:flex; align-items:center; gap:1rem;">
-                            <span id="discountToggleLabel" style="font-size:0.85rem; font-weight:600; color:rgba(255,255,255,0.6);">OFF</span>
+                            <span id="discountToggleLabel" style="font-size:0.85rem; font-weight:600; color:var(--admin-text-muted);">OFF</span>
                             <label class="big-toggle">
                                 <input type="checkbox" id="discountToggle" onchange="onDiscountToggle(this.checked)">
                                 <span class="big-toggle-slider"></span>
@@ -239,23 +239,23 @@
                         <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:center;">
                             <!-- Percent control -->
                             <div>
-                                <label class="form-label" style="color:rgba(255,255,255,0.7); margin-bottom:0.75rem; display:block;">
+                                <label class="form-label" style="margin-bottom:0.75rem; display:block;">
                                     เปอร์เซ็นต์ส่วนลด
                                 </label>
                                 <div style="display:flex; align-items:center; gap:1rem;">
                                     <input type="range" id="discountSlider" min="1" max="50" value="10"
                                         style="flex:1; accent-color:#e74c3c; height:6px;"
                                         oninput="syncDiscountInput(this.value)">
-                                    <div style="display:flex; align-items:center; background:rgba(255,255,255,0.08); border:1px solid rgba(231,76,60,0.3); border-radius:8px; overflow:hidden; width:90px;">
+                                    <div style="display:flex; align-items:center; background:rgba(0,0,0,0.03); border:1px solid rgba(231,76,60,0.2); border-radius:8px; overflow:hidden; width:90px;">
                                         <input type="number" id="discountInput" min="1" max="50" value="10"
-                                            style="width:55px; background:transparent; border:none; color:#fff; font-size:1.25rem; font-weight:700; padding:0.4rem 0.6rem; text-align:right; outline:none;"
+                                            style="width:55px; background:transparent; border:none; color:var(--admin-text); font-size:1.25rem; font-weight:700; padding:0.4rem 0.6rem; text-align:right; outline:none;"
                                             oninput="syncDiscountSlider(this.value)">
-                                        <span style="color:rgba(255,255,255,0.5); font-size:1rem; padding-right:0.5rem;">%</span>
+                                        <span style="color:var(--admin-text-muted); font-size:1rem; padding-right:0.5rem;">%</span>
                                     </div>
                                 </div>
                                 <div style="display:flex; justify-content:space-between; margin-top:0.4rem;">
-                                    <span style="font-size:0.7rem; color:rgba(255,255,255,0.3);">1%</span>
-                                    <span style="font-size:0.7rem; color:rgba(255,255,255,0.3);">50%</span>
+                                    <span style="font-size:0.7rem; color:var(--admin-text-dim);">1%</span>
+                                    <span style="font-size:0.7rem; color:var(--admin-text-dim);">50%</span>
                                 </div>
                                 <button class="btn btn-primary mt-2" onclick="saveDiscount()" style="background:linear-gradient(135deg,#c0392b,#e74c3c); border:none; width:100%;">
                                     <i class="fa-solid fa-floppy-disk"></i> บันทึกการตั้งค่า
@@ -263,8 +263,8 @@
                             </div>
                             <!-- Preview -->
                             <div>
-                                <div style="font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:0.75rem;">Preview — ตัวอย่างราคา</div>
-                                <div id="discountPreview" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:1.25rem;">
+                                <div style="font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--admin-text-muted); margin-bottom:0.75rem;">Preview — ตัวอย่างราคา</div>
+                                <div id="discountPreview" style="background:rgba(0,0,0,0.02); border:1px solid var(--admin-border); border-radius:10px; padding:1.25rem;">
                                     <!-- Filled by JS -->
                                 </div>
                             </div>
