@@ -1407,6 +1407,7 @@ img {
     flex-direction: column;
     flex: 0 0 55%;
     width: 55%;
+    aspect-ratio: 1 / 1;
 }
 
 .modal-visual img {
@@ -1564,8 +1565,9 @@ img {
     .modal-visual {
         flex: 0 0 auto !important;
         width: 100% !important;
-        height: 350px !important;
-        max-height: 40vh !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+        max-height: 50vh !important;
     }
     .modal-visual img {
         height: 100% !important;
