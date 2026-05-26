@@ -1307,10 +1307,46 @@ body {
     .card-header {
         flex-direction: column;
         align-items: flex-start;
+        padding: 1rem;
+        gap: 0.75rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+
+    .product-list-table th, 
+    .product-list-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.85rem;
     }
 
     .product-list-table th:nth-child(3),
     .product-list-table td:nth-child(3) { display: none; }
+
+    /* Admin Drawer (Modals) */
+    .admin-drawer {
+        width: 100vw;
+        border-left: none;
+    }
+    
+    .drawer-header {
+        padding: 1rem;
+    }
+    
+    .drawer-body {
+        padding: 1rem;
+    }
+    
+    .drawer-footer {
+        padding: 1rem;
+        flex-direction: column-reverse; /* Stack buttons on mobile */
+    }
+    
+    .drawer-footer .btn {
+        width: 100%;
+        justify-content: center;
+    }
 
     /* Topbar adjustments */
     .admin-topbar {
