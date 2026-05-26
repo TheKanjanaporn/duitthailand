@@ -944,7 +944,7 @@ function openCropper(dataUrl, target) {
         
         setTimeout(() => {
             cropper = new Cropper(image, {
-                aspectRatio: 55 / 45,
+                aspectRatio: 1,
                 viewMode: 1,
                 dragMode: 'move',
                 autoCropArea: 1,
