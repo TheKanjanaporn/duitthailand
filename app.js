@@ -914,7 +914,7 @@ function renderProducts() {
         let priceHtml;
         if (hasSale) {
             const salePrice = calcDiscountedPrice(p.price, productPct);
-            const saveLbl   = lang === "th" ? `ลด ${productPct}%` : `-${productPct}%`;
+            const saveLbl   = `-${productPct}%`;
             priceHtml = `
                 <div class="price-block">
                     <span class="price-original">฿${p.price}</span>
@@ -937,7 +937,6 @@ function renderProducts() {
         card.innerHTML = `
             <div class="product-image-wrap">
                 <span class="product-badge">${badge}</span>
-                ${hasSale ? `<span class="discount-ribbon">-${productPct}%</span>` : ''}
                 <img id="card-img-${p.id}" src="${p.image}" alt="${title}" loading="lazy">
             </div>
             <div class="product-info">
@@ -1056,7 +1055,7 @@ function openModal(productId) {
     let priceHtml;
     if (hasSale) {
         const salePrice  = calcDiscountedPrice(product.price, productPct);
-        const discLbl    = lang === "th" ? `ลด ${productPct}%` : `-${productPct}% OFF`;
+        const discLbl    = `-${productPct}%`;
         priceHtml = `
             <div class="modal-price-block">
                 <span class="modal-price-sale">฿${salePrice}</span>
